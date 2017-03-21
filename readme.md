@@ -1,37 +1,37 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: **X** hours spent in total
+Time spent: **1.5** hours spent in total
 
 > Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
 
 1. WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
-  - [*] Summary: xss vulnerability in creating posts or pages
+  - [x] Summary: xss vulnerability in creating posts or pages
     - Vulnerability types: XSS
     - Tested in version: 4.0
     - Fixed in version: 4.2.3
-  - [*] GIF Walkthrough: [here](http://i.imgur.com/3geOSUP.png)
-  - [*] Steps to recreate: create a post with this text: (<a href="[caption code=">]</a><a title=" onmouseover=alert('test') ">link</a>)
-  - [*] Affected source code:
+  - [x] GIF Walkthrough: [here](http://i.imgur.com/3geOSUP.png)
+  - [x] Steps to recreate: create a post with this text: (<a href="[caption code=">]</a><a title=" onmouseover=alert('test') ">link</a>)
+  - [x] Affected source code:
     - [new post](https://core.trac.wordpress.org/browser/trunk/src/wp-admin/post-new.php)
 1. Title: WordPress 3.6.0-4.7.2 - Authenticated Cross-Site Scripting (XSS) via Media File Metadata
-  - [*] Summary: you can exploit the site through audio playlist metadata
+  - [x] Summary: you can exploit the site through audio playlist metadata
     - Vulnerability types: XSS
     - Tested in version: 
     - Fixed in version: 4.7.3
-  - [*] GIF Walkthrough: [here](http://i.imgur.com/7CprZpd.png)
-  - [*] Steps to recreate: upload a certain mp3 file to an audio playlist in a post
-  - [*] Affected source code:
+  - [x] GIF Walkthrough: [here](http://i.imgur.com/7CprZpd.png)
+  - [x] Steps to recreate: upload a certain mp3 file to an audio playlist in a post
+  - [x] Affected source code:
     - [wp playlist](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/js/mediaelement/wp-playlist.js)
 1. Title: WordPress  4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds
-  - [*] Summary: you can execute js through youtube embeds
+  - [x] Summary: you can execute js through youtube embeds
     - Vulnerability types: XSS
     - Tested in version: 4.0
     - Fixed in version: 4.7.3
-  - [*] GIF Walkthrough: [here](http://i.imgur.com/3EZNQVR.png)
-  - [*] Steps to recreate: create a post with this text: ([embed src='https://youtube.com/embed/12345\x3csvg onload=alert(1)\x3e'][/embed])
-  - [*] Affected source code:
+  - [x] GIF Walkthrough: [here](http://i.imgur.com/3EZNQVR.png)
+  - [x] Steps to recreate: create a post with this text: ([embed src='https://youtube.com/embed/12345\x3csvg onload=alert(1)\x3e'][/embed])
+  - [x] Affected source code:
     - [embed](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/embed.php)
 1. (Optional) Vulnerability Name or ID
   - [ ] Summary: 
